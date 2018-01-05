@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
                     IntentIntegrator scanIntegrator = new IntentIntegrator(MainActivity.this);
                     scanIntegrator.initiateScan();
 
+
+
                 }
             }
 
@@ -55,6 +57,17 @@ public class MainActivity extends AppCompatActivity {
             String scanFormat = scanningResult.getFormatName();
             formatTxt.setText("FORMAT: " + scanFormat);
             contentTxt.setText("CONTENT: " + scanContent);
+
+            Intent i = new Intent(MainActivity.this, ShowDetails.class);
+            i.putExtra("scansno",scanContent);
+            startActivity(i);
+         /*   String type = "scan";
+
+            String scansno= contentTxt.getText().toString();
+           //BackgroundWorker backgroundWorker = new BackgroundWorker(this);
+        //  backgroundWorker.execute(type, scansno);
+
+*/
         }
         else{
             Toast toast = Toast.makeText(getApplicationContext(),
