@@ -8,20 +8,10 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="175dp"
-        android:layout_height="94dp"
+        android:layout_width="216dp"
+        android:layout_height="173dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="42dp" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Find details"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="169dp" />
-
-
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="53dp" />
 
 </android.support.constraint.ConstraintLayout>
