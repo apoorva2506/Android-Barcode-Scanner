@@ -18,8 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".ShowDetails"></activity>
+        <activity android:name=".ShowDetails" />
+        <activity android:name=".SurveyActivity"></activity>
     </application>
 
 </manifest>

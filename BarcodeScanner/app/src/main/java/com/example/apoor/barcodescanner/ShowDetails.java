@@ -5,7 +5,9 @@ import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,6 +25,7 @@ public class ShowDetails extends AppCompatActivity {
 
     ListView listView;
     TextView result;
+    Button surveybtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +37,16 @@ public class ShowDetails extends AppCompatActivity {
 
         //listView = (ListView) findViewById(R.id.listView);
         result = (TextView) findViewById(R.id.textView);
+        surveybtn= (Button) findViewById(R.id.button);
         getJSON("http://192.168.1.106/test.php?serialno="+str);
+
+        surveybtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Perform action on click
+                Intent i = new Intent(ShowDetails.this, SurveyActivity.class);
+                ShowDetails.this.startActivity(i);
+            }
+        });
     }
 
 
